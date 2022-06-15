@@ -9,7 +9,11 @@
     "run": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "dev:watch": "tsc-watch --onSuccess \"npm run run\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint --fix src/**/*.ts",
+    "lint:dry": "npx eslint --fix-dry-run src/**/*.ts",
+    "format": "npx prettier --write .",
+    "format:dry": "npx prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,9 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^17.0.43",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
     "ts-node": "^10.8.1",
     "tsc-watch": "^5.0.3",
     "typescript": "^4.7.3"
