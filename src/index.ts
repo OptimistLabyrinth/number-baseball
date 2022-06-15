@@ -1,6 +1,8 @@
+import messageModule from './message'
+
 main()
 
 function main() {
-  const message = '숫자 야구 😊😊'
+  const message = messageModule.get()
   console.log(message)
 }

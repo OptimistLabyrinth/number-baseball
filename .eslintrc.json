@@ -16,6 +16,7 @@
     "@typescript-eslint"
   ],
   "ignorePatterns": [
+    ".mocharc.json",
     "package-lock.json",
     "package.json",
     "tsconfig.json"
@@ -52,7 +53,13 @@
     ],
     "comma-dangle": [
       "error",
-      "only-multiline"
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
     ],
     "object-curly-spacing": [
       "error",
