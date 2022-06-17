@@ -26,7 +26,7 @@ describe('index.ts 테스트', () => {
       if (spy === null) {
         throw new Error('invalid sinon spy: null')
       }
-      const result = spy()
+      const result = messageModule.get()
       expect(spy.calledOnce).to.be.equal(true)
       expect(result).to.be.equal(MESSAGE)
     })
