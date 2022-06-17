@@ -21,7 +21,7 @@ describe('NumberInput 클래스', () => {
       spy = null
     })
 
-    it('성공 시 NumberInput 객체의 userInput 필드의 값은 입력값과 동일하다', () => {
+    it('성공 시 NumberInputController 객체의 userInput 필드의 값은 입력값과 동일하다', () => {
       if (spy === null) {
         throw new Error('invalid sinon spy: null')
       }
