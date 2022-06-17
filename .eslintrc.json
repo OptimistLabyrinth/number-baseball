@@ -18,7 +18,10 @@
     "prettier"
   ],
   "ignorePatterns": [
+    ".nyc_output",
     ".mocharc.json",
+    ".nycrc",
+    "coverage",
     "package-lock.json",
     "package.json",
     "tsconfig.json"

@@ -1,7 +1,10 @@
 dist/
 node_modules/
 
+.nyc_output
 .eslintrc.json
 .mocharc.json
+.nycrc
+coverage/
 package-lock.json
 tsconfig.json
