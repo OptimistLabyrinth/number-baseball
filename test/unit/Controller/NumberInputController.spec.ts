@@ -3,7 +3,7 @@ import * as sinon from 'sinon'
 
 import NumberInputController from '../../../src/Controller/NumberInputController'
 
-describe('NumberInput 클래스', () => {
+describe('NumberInputController 클래스', () => {
   describe('setUserInput 메소드', () => {
     let spy: sinon.SinonSpy | null = null
 
