@@ -1,8 +1,10 @@
-import messageModule from './message'
+import UserInput from './View/UserInput'
 
 main()
 
-function main() {
-  const message = messageModule.get()
-  console.log(message)
+async function main() {
+  const numberInput = await UserInput.number()
+  console.log({
+    numberInput,
+  })
 }
