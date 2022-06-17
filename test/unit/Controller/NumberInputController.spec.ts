@@ -32,4 +32,32 @@ describe('NumberInputController 클래스', () => {
       expect(numberInputController.userInput).to.be.equal(userInput)
     })
   })
+
+  describe('validateUserInput 메소드', () => {
+    let spy: sinon.SinonSpy | null = null
+
+    beforeEach(() => {
+      if (spy !== null) {
+        throw new Error('invalid sinon spy: failed to restore')
+      }
+      spy = sinon.spy(NumberInputController.prototype, 'validateUserInput')
+    })
+    afterEach(() => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: failed to setup')
+      }
+      spy.restore()
+      spy = null
+    })
+
+    it('성공 시 NumberInputController 객체의 userInput 필드의 값은 입력값과 동일하다', () => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: null')
+      }
+      const numberInputController = new NumberInputController()
+      const result = numberInputController.validateUserInput()
+      expect(spy.calledOnce).to.be.equal(true)
+      expect(result).to.be.equal(true)
+    })
+  })
 })
