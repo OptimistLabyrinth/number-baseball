@@ -1,13 +1,12 @@
 import UserInputView from './UserInputView'
+import Controller from '../Controller'
 
 export default class View {
-  private userInputView: UserInputView
-
-  constructor() {
-    this.userInputView = new UserInputView()
-  }
-
   async run() {
-    await this.userInputView.number()
+    const userInputView = new UserInputView()
+    const numberInput = await userInputView.number()
+
+    const numberInputController = new Controller.NumberInputController()
+    numberInputController.setUserInput(numberInput)
   }
 }
