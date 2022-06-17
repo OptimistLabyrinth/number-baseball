@@ -50,11 +50,13 @@ describe('NumberInputController 클래스', () => {
       spy = null
     })
 
-    it('성공 시 NumberInputController 객체의 userInput 필드의 값은 입력값과 동일하다', () => {
+    it('userInput 에 이상없으면 true 를 반환한다', () => {
       if (spy === null) {
         throw new Error('invalid sinon spy: null')
       }
       const numberInputController = new NumberInputController()
+      const userInput = '123'
+      numberInputController.setUserInput(userInput)
       const result = numberInputController.validateUserInput()
       expect(spy.calledOnce).to.be.equal(true)
       expect(result).to.be.equal(true)
