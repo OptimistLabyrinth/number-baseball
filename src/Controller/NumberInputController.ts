@@ -1,4 +1,4 @@
-export default class NumberInput {
+export default class NumberInputController {
   userInput = ''
 
   setUserInput(userInput: string): void {

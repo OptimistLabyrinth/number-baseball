@@ -1,7 +1,7 @@
-import NumberInput from './NumberInput'
+import NumberInputController from './NumberInputController'
 
 const Controller = {
-  NumberInput,
+  NumberInputController,
 }
 
 export default Controller

@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import * as sinon from 'sinon'
 
-import NumberInput from '../../../src/Controller/NumberInput'
+import NumberInputController from '../../../src/Controller/NumberInputController'
 
 describe('NumberInput 클래스', () => {
   describe('setUserInput 메소드', () => {
@@ -11,7 +11,7 @@ describe('NumberInput 클래스', () => {
       if (spy !== null) {
         throw new Error('invalid sinon spy: failed to restore')
       }
-      spy = sinon.spy(NumberInput.prototype, 'setUserInput')
+      spy = sinon.spy(NumberInputController.prototype, 'setUserInput')
     })
     afterEach(() => {
       if (spy === null) {
@@ -25,11 +25,11 @@ describe('NumberInput 클래스', () => {
       if (spy === null) {
         throw new Error('invalid sinon spy: null')
       }
-      const numberInput = new NumberInput()
+      const numberInputController = new NumberInputController()
       const userInput = '123'
-      numberInput.setUserInput(userInput)
+      numberInputController.setUserInput(userInput)
       expect(spy.calledOnce).to.be.equal(true)
-      expect(numberInput.userInput).to.be.equal(userInput)
+      expect(numberInputController.userInput).to.be.equal(userInput)
     })
   })
 })
