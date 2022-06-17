@@ -1,7 +1,13 @@
-import UserInput from './UserInput'
+import UserInputView from './UserInputView'
 
-const View = {
-  UserInput,
+export default class View {
+  private userInputView: UserInputView
+
+  constructor() {
+    this.userInputView = new UserInputView()
+  }
+
+  async run() {
+    await this.userInputView.number()
+  }
 }
-
-export default View
