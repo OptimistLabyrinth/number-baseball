@@ -7,7 +7,7 @@ export default class NumberInputController {
     this.userInput = userInput
   }
 
-  validateUserInput() {
+  validateUserInput(): boolean {
     const numberInputModel = new Model.NumberInputModel()
     return numberInputModel.validate(this.userInput)
   }
