@@ -1,3 +1,7 @@
-const NumberInput = {}
+export default class NumberInput {
+  userInput = ''
 
-export default NumberInput
+  setUserInput(userInput: string): void {
+    this.userInput = userInput
+  }
+}
