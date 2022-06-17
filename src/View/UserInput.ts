@@ -1,7 +1,7 @@
 import { stdin, stdout } from 'process'
 import { createInterface } from 'readline'
 
-async function question(message: string) {
+async function question(message: string): Promise<string> {
   return new Promise((resolve) => {
     const readLine = createInterface({
       input: stdin,
@@ -14,7 +14,7 @@ async function question(message: string) {
   })
 }
 
-async function number() {
+async function number(): Promise<string> {
   const numberInput = await question('숫자를 입력하세요: ')
   return numberInput
 }
