@@ -16,7 +16,6 @@ export default class UserInputView {
   }
 
   async number(): Promise<string> {
-    const numberInput = await this.question('숫자를 입력하세요: ')
-    return numberInput
+    return await this.question('숫자를 입력하세요: ')
   }
 }
