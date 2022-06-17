@@ -1,9 +1,9 @@
-import UserInput from './View/UserInput'
+import View from './View'
 
 main()
 
 async function main() {
-  const numberInput = await UserInput.number()
+  const numberInput = await View.UserInput.number()
   console.log({
     numberInput,
   })
