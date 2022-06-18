@@ -1,6 +1,6 @@
 export interface ScoreDto {
   error: null | string
-  strike: number
-  ball: number
-  nothing: number
+  strikes: number
+  balls: number
+  nothings: number
 }
