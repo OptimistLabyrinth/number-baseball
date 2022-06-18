@@ -1,5 +1,5 @@
 import Model from '../Model'
-import { ScoreDto } from '../dto/ScoreDto'
+import { ScoreModelDto } from '../dto/ScoreModelDto'
 
 export default class ScoreController {
   userInput = ''
@@ -10,8 +10,8 @@ export default class ScoreController {
     this.numberToGuess = numberToGuess
   }
 
-  measure(): ScoreDto {
+  measure() {
     const scoreModel = new Model.ScoreModel(this.numberToGuess)
-    return scoreModel.measure(this.userInput)
+    const score = scoreModel.measure(this.userInput)
   }
 }

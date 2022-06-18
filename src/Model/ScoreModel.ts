@@ -1,4 +1,4 @@
-import { ScoreDto } from '../dto/ScoreDto'
+import { ScoreModelDto } from '../dto/ScoreModelDto'
 import NumberConst from '../const/NumberConst'
 import ScoreConst from '../const/ScoreConst'
 
@@ -14,7 +14,7 @@ export default class ScoreModel {
     }
   }
 
-  measure(userInput: string): ScoreDto {
+  measure(userInput: string): ScoreModelDto {
     const strikes = this.countStrikes(userInput)
     const balls = this.countBalls(userInput)
     const nothings = this.countNothings()
