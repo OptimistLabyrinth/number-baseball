@@ -2,7 +2,6 @@ import { expect } from 'chai'
 import * as sinon from 'sinon'
 
 import NumberInputController from '../../../src/Controller/NumberInputController'
-import Model from '../../../src/Model'
 
 describe('NumberInputController 클래스', () => {
   describe('setUserInput 메소드', () => {
