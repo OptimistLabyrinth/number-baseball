@@ -12,6 +12,7 @@
     "test": "mocha test/**/*.spec.ts --exit",
     "test:watch": "mocha --watch test/**/*.spec.ts --exit",
     "test:coverage": "nyc npm run test",
+    "tidy": "npm run format && npm run lint",
     "lint": "npx eslint --fix src/**/*.ts test/**/*.ts",
     "lint:dry": "npx eslint --fix-dry-run src/**/*.ts test/**/*.ts",
     "format": "npx prettier --write .",
