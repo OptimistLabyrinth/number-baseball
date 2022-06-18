@@ -6,4 +6,8 @@ export default class ScoreController {
   constructor(userInput: string) {
     this.userInput = userInput
   }
+
+  giveForUserInput() {
+    // *
+  }
 }

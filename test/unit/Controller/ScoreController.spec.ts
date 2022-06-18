@@ -33,6 +33,9 @@ describe('ScoreController 클래스', () => {
       if (spy === null) {
         throw new Error('invalid sinon spy: null')
       }
+      const userInput = '123'
+      const scoreController = new ScoreController(userInput)
+      scoreController.giveForUserInput()
       expect(spy.calledOnce).to.be.equal(true)
     })
   })
