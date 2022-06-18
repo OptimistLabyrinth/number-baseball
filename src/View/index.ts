@@ -6,8 +6,9 @@ export default class View {
     const numberInputView = new NumberInputView()
     const numberInput = await numberInputView.request()
 
-    const numberInputController = new Controller.NumberInputController()
-    numberInputController.setUserInput(numberInput)
+    const numberInputController = new Controller.NumberInputController(
+      numberInput,
+    )
     const validNumberInput = numberInputController.validateUserInput()
     if (!validNumberInput) {
       numberInputView.respondInvalidInput()

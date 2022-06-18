@@ -3,7 +3,7 @@ import Model from '../Model'
 export default class NumberInputController {
   userInput = ''
 
-  setUserInput(userInput: string): void {
+  constructor(userInput: string) {
     this.userInput = userInput
   }
 
