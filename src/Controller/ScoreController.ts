@@ -1,4 +1,5 @@
 import Model from '../Model'
+import { ScoreDto } from '../dto/ScoreDto'
 
 export default class ScoreController {
   userInput = ''
@@ -7,7 +8,8 @@ export default class ScoreController {
     this.userInput = userInput
   }
 
-  measure() {
-    // *
+  measure(): ScoreDto {
+    const scoreModel = new Model.ScoreModel()
+    return scoreModel.measure(this.userInput)
   }
 }
