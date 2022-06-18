@@ -1,10 +1,10 @@
-export default class NumberInputModel {
-  private possibleCharacters = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+import NumberConst from '../const/NumberConst'
 
+export default class NumberInputModel {
   validate(userInput: string): boolean {
-    if (userInput.length !== 3) return false
+    if (userInput.length !== NumberConst.LENGTH) return false
     for (const each of userInput) {
-      if (!this.possibleCharacters.find((x) => x === each)) {
+      if (!NumberConst.POSSIBLE_CHARACTERS.find((x) => x === each)) {
         return false
       }
     }

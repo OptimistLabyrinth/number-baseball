@@ -3,6 +3,7 @@ import * as sinon from 'sinon'
 
 // eslint-disable-next-line
 import NumberToGuessController from '../../../src/Controller/NumberToGuessController'
+import NumberConst from '../../../src/const/NumberConst'
 
 describe('NumberToGuessController 클래스', () => {
   describe('generate 메소드', () => {
@@ -22,14 +23,14 @@ describe('NumberToGuessController 클래스', () => {
       spy = null
     })
 
-    it('결과값 문자열은 길이가 3 이다', () => {
+    it('결과값 문자열은 길이가 ' + `${NumberConst.LENGTH}` + ' 이다', () => {
       if (spy === null) {
         throw new Error('invalid sinon spy: null')
       }
       const numberToGuessController = new NumberToGuessController()
       const result = numberToGuessController.generate()
       expect(spy.calledOnce).to.be.equal(true)
-      expect(result.length).to.be.equal(3)
+      expect(result.length).to.be.equal(NumberConst.LENGTH)
     })
     // prettier-ignore
     it(
@@ -42,7 +43,7 @@ describe('NumberToGuessController 클래스', () => {
         const numberToGuessController = new NumberToGuessController()
         const result = numberToGuessController.generate()
         let isValid = true
-        const possibleCharacters = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        const possibleCharacters = [...NumberConst.POSSIBLE_CHARACTERS]
         for (const character of result) {
           if (!possibleCharacters.find((each) => each === character)) {
             isValid = false
