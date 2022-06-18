@@ -12,14 +12,14 @@ describe('ScoreController 클래스', () => {
     })
   })
 
-  describe('giveForUserInput 메소드', () => {
+  describe('measure 메소드', () => {
     let spy: sinon.SinonSpy | null = null
 
     beforeEach(() => {
       if (spy !== null) {
         throw new Error('invalid sinon spy: failed to restore')
       }
-      spy = sinon.spy(ScoreController.prototype, 'giveForUserInput')
+      spy = sinon.spy(ScoreController.prototype, 'measure')
     })
     afterEach(() => {
       if (spy === null) {
@@ -35,7 +35,7 @@ describe('ScoreController 클래스', () => {
       }
       const userInput = '123'
       const scoreController = new ScoreController(userInput)
-      scoreController.giveForUserInput()
+      scoreController.measure()
       expect(spy.calledOnce).to.be.equal(true)
     })
   })

@@ -7,7 +7,7 @@ export default class ScoreController {
     this.userInput = userInput
   }
 
-  giveForUserInput() {
+  measure() {
     // *
   }
 }
