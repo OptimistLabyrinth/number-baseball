@@ -9,7 +9,7 @@ export default class ScoreModel {
   constructor(numberToGuess: string) {
     this.numberToGuess = numberToGuess
     this.scores = []
-    for (const each of numberToGuess) {
+    for (let i = 0; i < numberToGuess.length; ++i) {
       this.scores.push(ScoreConst.ScoreString.NONE)
     }
   }
@@ -31,15 +31,12 @@ export default class ScoreModel {
     }
     return {
       error: null,
-      // prettier-ignore
       strikes: this.scores.filter(
         (score) => score === ScoreConst.ScoreString.STRIKE,
       ).length,
-      // prettier-ignore
       balls: this.scores.filter(
         (score) => score === ScoreConst.ScoreString.BALL,
       ).length,
-      // prettier-ignore
       nothings: this.scores.filter(
         (score) => score === ScoreConst.ScoreString.NOTHING,
       ).length,

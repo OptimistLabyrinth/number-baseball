@@ -7,7 +7,6 @@ import NumberConst from '../../../src/const/NumberConst'
 
 describe('NumberInputController 클래스', () => {
   describe('constructor', () => {
-    // prettier-ignore
     it(
       'NumberInputController 객체 생성 성공 시 ' +
         'userInput 필드의 값은 생성자 파라미터와 동일하다',
@@ -46,7 +45,6 @@ describe('NumberInputController 클래스', () => {
       expect(spy.calledOnce).to.be.equal(true)
       expect(result).to.be.equal(true)
     })
-    // prettier-ignore
     it(
       'userInput 길이가 ' +
         `${NumberConst.LENGTH}` +

@@ -32,10 +32,9 @@ describe('NumberToGuessController 클래스', () => {
       expect(spy.calledOnce).to.be.equal(true)
       expect(result.length).to.be.equal(NumberConst.LENGTH)
     })
-    // prettier-ignore
     it(
       '사용자가 맞춰야 하는 문자열의 개별 요소는 ' +
-      '전부 1 ~ 9 중의 하나로 이루어져 있어야 한다',
+        '전부 1 ~ 9 중의 하나로 이루어져 있어야 한다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')

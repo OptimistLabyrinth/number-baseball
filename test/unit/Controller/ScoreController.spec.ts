@@ -5,7 +5,6 @@ import ScoreController from '../../../src/controller/ScoreController'
 
 describe('ScoreController 클래스', () => {
   describe('constructor', () => {
-    // prettier-ignore
     it(
       'ScoreController 객체 생성 성공 시 ' +
         'userInput, numberToGuess 필드 각각이 생성자 파라미터와 동일하다',

@@ -32,7 +32,6 @@ describe('NumberInputModel 클래스', () => {
       expect(spy.calledOnce).to.be.equal(true)
       expect(valid).to.be.equal(true)
     })
-    // prettier-ignore
     it(
       '파라미터 userInput 길이가 ' +
         `${NumberConst.LENGTH}` +

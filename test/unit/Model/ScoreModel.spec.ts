@@ -6,12 +6,14 @@ import NumberConst from '../../../src/const/NumberConst'
 
 describe('ScoreModel 클래스', () => {
   describe('constructor', () => {
-    // prettier-ignore
-    it('ScoreModel 객체 생성 성공 시 ' + 'numberToGuess 필드의 값은 생성자 파라미터와 동일하다',() => {
-      const numberToGuess = '789'
-      const scoreModel = new ScoreModel(numberToGuess)
-      expect(scoreModel.numberToGuess).to.be.equal(numberToGuess)
-    },
+    it(
+      'ScoreModel 객체 생성 성공 시 ' +
+        'numberToGuess 필드의 값은 생성자 파라미터와 동일하다',
+      () => {
+        const numberToGuess = '789'
+        const scoreModel = new ScoreModel(numberToGuess)
+        expect(scoreModel.numberToGuess).to.be.equal(numberToGuess)
+      },
     )
   })
 
@@ -32,7 +34,6 @@ describe('ScoreModel 클래스', () => {
       spy = null
     })
 
-    // prettier-ignore
     it(
       '정상적으로 실행 시 결과값 error 는 null 이고 ' +
         '결과값 ScoreDto 객체의 strike, ball, nothing 의 총 합은 ' +
@@ -53,7 +54,6 @@ describe('ScoreModel 클래스', () => {
         expect(sumOfScores).to.be.equal(NumberConst.LENGTH)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 값이 동일하다면 ' +
         '결과값의 strikes === 3, balls === 0, nothings === 0 이다',
@@ -72,11 +72,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(0)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
         '세 개의 동일한 숫자를 발견하지만 위치가 모두 틀린 경우 ' +
-      '결과값의 strikes === 0, balls === 3, nothings === 0 이다',
+        '결과값의 strikes === 0, balls === 3, nothings === 0 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -92,7 +91,6 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(0)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
         '세 개의 숫자가 모두 다르다면 ' +
@@ -112,11 +110,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(3)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
-      '두 개는 숫자&위치 일치하고 한 개는 전혀 다른 숫자라면 ' +
-      '결과값의 strikes === 2, balls === 0, nothings === 1 이다',
+        '두 개는 숫자&위치 일치하고 한 개는 전혀 다른 숫자라면 ' +
+        '결과값의 strikes === 2, balls === 0, nothings === 1 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -132,11 +129,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(1)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
-      '한 개는 숫자&위치 일치하고 두 개는 숫자만 일치하면 ' +
-      '결과값의 strikes === 1, balls === 2, nothings === 0 이다',
+        '한 개는 숫자&위치 일치하고 두 개는 숫자만 일치하면 ' +
+        '결과값의 strikes === 1, balls === 2, nothings === 0 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -152,11 +148,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(0)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
-      '한 개는 숫자&위치 일치하고 한 개는 숫자만 일치하고 나머지 한 개는 전혀 다른 숫자라면 ' +
-      '결과값의 strikes === 1, balls === 1, nothings === 1 이다',
+        '한 개는 숫자&위치 일치하고 한 개는 숫자만 일치하고 나머지 한 개는 전혀 다른 숫자라면 ' +
+        '결과값의 strikes === 1, balls === 1, nothings === 1 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -172,11 +167,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(1)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
-      '한 개는 숫자&위치 일치하고 두 개는 전혀 다른 숫자라면 ' +
-      '결과값의 strikes === 1, balls === 0, nothings === 2 이다',
+        '한 개는 숫자&위치 일치하고 두 개는 전혀 다른 숫자라면 ' +
+        '결과값의 strikes === 1, balls === 0, nothings === 2 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -192,11 +186,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(2)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
-      '두 개는 숫자만 일치하고 한 개는 전혀 다른 숫자라면 ' +
-      '결과값의 strikes === 0, balls === 2, nothings === 1 이다',
+        '두 개는 숫자만 일치하고 한 개는 전혀 다른 숫자라면 ' +
+        '결과값의 strikes === 0, balls === 2, nothings === 1 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -212,11 +205,10 @@ describe('ScoreModel 클래스', () => {
         expect(resultScore.nothings).to.be.equal(1)
       },
     )
-    // prettier-ignore
     it(
       '필드 numberToGuess 와 파라미터 userInput 에서 ' +
-      '한 개는 숫자만 일치하고 두 개는 전혀 다른 숫자라면 ' +
-      '결과값의 strikes === 0, balls === 1, nothings === 2 이다',
+        '한 개는 숫자만 일치하고 두 개는 전혀 다른 숫자라면 ' +
+        '결과값의 strikes === 0, balls === 1, nothings === 2 이다',
       () => {
         if (spy === null) {
           throw new Error('invalid sinon spy: null')
@@ -251,7 +243,6 @@ describe('ScoreModel 클래스', () => {
       stub = null
     })
 
-    // prettier-ignore
     it(
       '결과값의 strikes, balls, nothings 값이 전부 0 이라면 ' +
         'error 는 오류 메시지를 담은 문자열 타입이다',

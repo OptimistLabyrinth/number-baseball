@@ -9,7 +9,6 @@ export default class View {
     const numberInputView = new NumberInputView()
     const numberInput = await numberInputView.request()
 
-    // prettier-ignore
     const numberInputController = new Controller.NumberInputController(
       numberInput,
     )
