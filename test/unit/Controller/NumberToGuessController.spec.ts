@@ -60,7 +60,7 @@ describe('NumberToGuessController 클래스', () => {
       }
       const numberToGuessController = new NumberToGuessController()
       const result = numberToGuessController.generate()
-      const charactersInNumberSet = new Set();
+      const charactersInNumberSet = new Set()
       for (const character of result) {
         charactersInNumberSet.add(character)
       }

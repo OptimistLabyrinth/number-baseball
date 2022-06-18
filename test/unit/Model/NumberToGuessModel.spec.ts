@@ -65,7 +65,7 @@ describe('NumberToGuessModel 클래스', () => {
       }
       const numberToGuessModel = new NumberToGuessModel()
       const result = numberToGuessModel.generate()
-      const charactersInNumberSet = new Set();
+      const charactersInNumberSet = new Set()
       for (const character of result) {
         charactersInNumberSet.add(character)
       }
