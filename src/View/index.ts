@@ -8,5 +8,6 @@ export default class View {
 
     const numberInputController = new Controller.NumberInputController()
     numberInputController.setUserInput(numberInput)
+    const validNumberInput = numberInputController.validateUserInput()
   }
 }
