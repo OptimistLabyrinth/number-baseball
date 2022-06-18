@@ -6,6 +6,7 @@ import NumberInputController from '../../../src/Controller/NumberInputController
 
 describe('NumberInputController 클래스', () => {
   describe('constructor', () => {
+    // prettier-ignore
     it(
       'NumberInputController 객체 생성 성공 시 ' +
         'userInput 필드의 값은 생성자 파라미터와 동일하다',
