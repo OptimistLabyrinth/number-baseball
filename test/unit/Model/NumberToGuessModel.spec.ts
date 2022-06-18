@@ -1,0 +1,55 @@
+import { expect } from 'chai'
+import * as sinon from 'sinon'
+
+import NumberToGuessModel from '../../../src/Model/NumberToGuessModel'
+
+describe('NumberToGuessModel 클래스', () => {
+  describe('create 메소드', () => {
+    let spy: sinon.SinonSpy | null = null
+
+    beforeEach(() => {
+      if (spy !== null) {
+        throw new Error('invalid sinon spy: failed to restore')
+      }
+      spy = sinon.spy(NumberToGuessModel.prototype, 'create')
+    })
+    afterEach(() => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: failed to setup')
+      }
+      spy.restore()
+      spy = null
+    })
+
+    it('사용자가 맞춰야 하는 문자열은 길이가 3 이다', () => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: null')
+      }
+      const numberToGuessModel = new NumberToGuessModel()
+      const result = numberToGuessModel.create()
+      expect(spy.calledOnce).to.be.equal(true)
+      expect(result.length).to.be.equal(3)
+    })
+    it(
+      '사용자가 맞춰야 하는 문자열의 개별 요소는 ' +
+        '전부 1 ~ 9 중의 하나로 이루어져 있어야 한다',
+      () => {
+        if (spy === null) {
+          throw new Error('invalid sinon spy: null')
+        }
+        const numberToGuessModel = new NumberToGuessModel()
+        const result = numberToGuessModel.create()
+        let isValid = true
+        const possibleCharacters = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        for (const character of result) {
+          if (!possibleCharacters.find((each) => each === character)) {
+            isValid = false
+            break
+          }
+        }
+        expect(spy.calledOnce).to.be.equal(true)
+        expect(isValid).to.be.equal(true)
+      },
+    )
+  })
+})
