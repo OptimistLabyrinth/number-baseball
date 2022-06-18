@@ -5,7 +5,7 @@ export default class ScoreViewBuilder {
   score: ScoreModelDto
 
   constructor(score: ScoreModelDto) {
-    this.score = score
+    this.score = { ...score }
   }
 
   build(): ScoreView {
