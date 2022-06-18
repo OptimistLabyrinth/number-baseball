@@ -54,7 +54,7 @@ describe('ScoreViewBuilder 클래스', () => {
     })
 
     it(
-      '필드 score 객체의 내용이 { error: \'오류 메시지를 담은 문자열\' } 이면 ' +
+      '필드 score 객체의 내용이 { error: 오류 메시지 } 이면 ' +
         'ErrorScoreView 객체를 리턴한다',
       () => {
         if (spy === null) {
@@ -93,7 +93,7 @@ describe('ScoreViewBuilder 클래스', () => {
     )
     it(
       '필드 score 객체의 내용이 ' +
-        '{ error: null, strikes: \'1 이상\', balls: \'1 이상\' } 이면 ' +
+        '{ error: null, strikes: 1 이상, balls: 1 이상 } 이면 ' +
         'StrikesAndBallsScoreView 객체를 리턴한다',
       () => {
         if (spy === null) {
@@ -113,7 +113,7 @@ describe('ScoreViewBuilder 클래스', () => {
     )
     it(
       '필드 score 객체의 내용이 ' +
-        '{ error: null, strikes: 0, balls: \'1 이상\' } 이면 ' +
+        '{ error: null, strikes: 0, balls: 1 이상 } 이면 ' +
         'BallsOnlyScoreView 객체를 리턴한다',
       () => {
         if (spy === null) {
