@@ -11,7 +11,7 @@ describe('NumberToGuessModel 클래스', () => {
       if (spy !== null) {
         throw new Error('invalid sinon spy: failed to restore')
       }
-      spy = sinon.spy(NumberToGuessModel.prototype, 'create')
+      spy = sinon.spy(NumberToGuessModel.prototype, 'generate')
     })
     afterEach(() => {
       if (spy === null) {
@@ -26,7 +26,7 @@ describe('NumberToGuessModel 클래스', () => {
         throw new Error('invalid sinon spy: null')
       }
       const numberToGuessModel = new NumberToGuessModel()
-      const result = numberToGuessModel.create()
+      const result = numberToGuessModel.generate()
       expect(spy.calledOnce).to.be.equal(true)
       expect(result.length).to.be.equal(3)
     })
@@ -38,7 +38,7 @@ describe('NumberToGuessModel 클래스', () => {
           throw new Error('invalid sinon spy: null')
         }
         const numberToGuessModel = new NumberToGuessModel()
-        const result = numberToGuessModel.create()
+        const result = numberToGuessModel.generate()
         let isValid = true
         const possibleCharacters = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
         for (const character of result) {

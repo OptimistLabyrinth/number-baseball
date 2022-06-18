@@ -1,8 +1,8 @@
 import Model from '../Model'
 
 export default class NumberToGuessController {
-  create(): string {
+  generate(): string {
     const numberToGuessModel = new Model.NumberToGuessModel()
-    return numberToGuessModel.create()
+    return numberToGuessModel.generate()
   }
 }

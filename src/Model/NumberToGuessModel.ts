@@ -1,7 +1,7 @@
 import * as crypto from 'crypto'
 
 export default class NumberToGuessModel {
-  create(): string {
+  generate(): string {
     const numbers: number[] = []
     while (numbers.length < 3) {
       const randomNumber = crypto.randomInt(1, 10)
