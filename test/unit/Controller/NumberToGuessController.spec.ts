@@ -54,5 +54,18 @@ describe('NumberToGuessController 클래스', () => {
         expect(isValid).to.be.equal(true)
       },
     )
+    it('사용자가 맞춰야 하는 세 자리의 숫자에는 중복되는 숫자가 없다', () => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: null')
+      }
+      const numberToGuessController = new NumberToGuessController()
+      const result = numberToGuessController.generate()
+      const charactersInNumberSet = new Set();
+      for (const character of result) {
+        charactersInNumberSet.add(character)
+      }
+      expect(spy.calledOnce).to.be.equal(true)
+      expect(charactersInNumberSet.size).to.be.equal(NumberConst.LENGTH)
+    })
   })
 })
