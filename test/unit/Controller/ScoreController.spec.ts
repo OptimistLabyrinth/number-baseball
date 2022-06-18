@@ -11,4 +11,29 @@ describe('ScoreController 클래스', () => {
       expect(scoreController.userInput).to.be.equal(userInput)
     })
   })
+
+  describe('giveForUserInput 메소드', () => {
+    let spy: sinon.SinonSpy | null = null
+
+    beforeEach(() => {
+      if (spy !== null) {
+        throw new Error('invalid sinon spy: failed to restore')
+      }
+      spy = sinon.spy(ScoreController.prototype, 'giveForUserInput')
+    })
+    afterEach(() => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: failed to setup')
+      }
+      spy.restore()
+      spy = null
+    })
+
+    it('userInput 에 이상없으면 true 를 반환한다', () => {
+      if (spy === null) {
+        throw new Error('invalid sinon spy: null')
+      }
+      expect(spy.calledOnce).to.be.equal(true)
+    })
+  })
 })
