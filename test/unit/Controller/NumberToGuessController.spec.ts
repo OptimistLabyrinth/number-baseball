@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import * as sinon from 'sinon'
 
 // eslint-disable-next-line
-import NumberToGuessController from '../../../src/Controller/NumberToGuessController'
+import NumberToGuessController from '../../../src/controller/NumberToGuessController'
 import NumberConst from '../../../src/const/NumberConst'
 
 describe('NumberToGuessController 클래스', () => {

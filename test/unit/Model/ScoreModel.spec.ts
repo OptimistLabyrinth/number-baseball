@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import * as sinon from 'sinon'
 
-import ScoreModel from '../../../src/Model/ScoreModel'
+import ScoreModel from '../../../src/model/ScoreModel'
 import NumberConst from '../../../src/const/NumberConst'
 
 describe('ScoreModel 클래스', () => {

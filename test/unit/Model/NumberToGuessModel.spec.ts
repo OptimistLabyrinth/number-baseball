@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import * as sinon from 'sinon'
 
-import NumberToGuessModel from '../../../src/Model/NumberToGuessModel'
+import NumberToGuessModel from '../../../src/model/NumberToGuessModel'
 import NumberConst from '../../../src/const/NumberConst'
 
 describe('NumberToGuessModel 클래스', () => {

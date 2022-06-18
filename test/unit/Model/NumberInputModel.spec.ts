@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import * as sinon from 'sinon'
 
-import NumberInputModel from '../../../src/Model/NumberInputModel'
+import NumberInputModel from '../../../src/model/NumberInputModel'
 import NumberConst from '../../../src/const/NumberConst'
 
 describe('NumberInputModel 클래스', () => {

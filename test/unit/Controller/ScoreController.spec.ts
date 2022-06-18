@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import * as sinon from 'sinon'
 
-import ScoreController from '../../../src/Controller/ScoreController'
+import ScoreController from '../../../src/controller/ScoreController'
 
 describe('ScoreController 클래스', () => {
   describe('constructor', () => {

@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import * as sinon from 'sinon'
 
 // eslint-disable-next-line
-import NumberInputController from '../../../src/Controller/NumberInputController'
+import NumberInputController from '../../../src/controller/NumberInputController'
 import NumberConst from '../../../src/const/NumberConst'
 
 describe('NumberInputController 클래스', () => {

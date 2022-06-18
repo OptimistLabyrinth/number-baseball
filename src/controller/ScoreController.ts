@@ -1,5 +1,4 @@
-import Model from '../Model'
-import { ScoreModelDto } from '../dto/ScoreModelDto'
+import Model from '../model'
 
 export default class ScoreController {
   userInput = ''

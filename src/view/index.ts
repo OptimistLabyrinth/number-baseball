@@ -1,5 +1,5 @@
 import NumberInputView from './NumberInputView'
-import Controller from '../Controller'
+import Controller from '../controller'
 
 export default class View {
   async run() {
