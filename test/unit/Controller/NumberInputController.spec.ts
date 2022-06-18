@@ -5,7 +5,7 @@ import NumberInputController from '../../../src/Controller/NumberInputController
 
 describe('NumberInputController 클래스', () => {
   describe('constructor', () => {
-    it('성공 시 NumberInputController 객체의 userInput 필드의 값은 입력값과 동일하다', () => {
+    it('NumberInputController 객체 생성 성공 시 userInput 필드의 값은 생성자 파라미터와 동일하다', () => {
       const userInput = '123'
       const numberInputController = new NumberInputController(userInput)
       expect(numberInputController.userInput).to.be.equal(userInput)
