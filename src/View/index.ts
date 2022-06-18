@@ -3,6 +3,9 @@ import Controller from '../Controller'
 
 export default class View {
   async run() {
+    const numberToGuessController = new Controller.NumberToGuessController()
+    const numberToGuess = numberToGuessController.generate()
+
     const numberInputView = new NumberInputView()
     const numberInput = await numberInputView.request()
 
