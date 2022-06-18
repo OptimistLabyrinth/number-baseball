@@ -4,7 +4,7 @@ import * as sinon from 'sinon'
 import NumberToGuessModel from '../../../src/Model/NumberToGuessModel'
 
 describe('NumberToGuessModel 클래스', () => {
-  describe('create 메소드', () => {
+  describe('generate 메소드', () => {
     let spy: sinon.SinonSpy | null = null
 
     beforeEach(() => {
